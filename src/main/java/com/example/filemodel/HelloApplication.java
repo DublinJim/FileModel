@@ -23,20 +23,25 @@ public class HelloApplication extends Application {
     stage.show();
     //////////////////////////////////////////
     String path = "C:\\Users\\james.keogh\\Desktop\\templates\\Java.fx\\";
-    String filename = "out.wav";
-    String fileOut = path + filename;
-    int versionNumber=1;
-    String version ="("+versionNumber+")";
-    File file = new File(path + filename);
+    String filename = "out";
+    String extention = ".wav";
 
-    if (file.createNewFile()) {
-      System.out.println("We can write the file !!!");
-    } else {
-      System.out.println("FILE IS BLOODY FOUND FFS!!!");
+
+    int versionNumber=1;
+    String versionString ="("+versionNumber+")";
+
+
+    String fileOut=path+filename+extention;
+    File file = new File(fileOut);
+
+    while (file.exists ()) {
+      System.out.println("file exists");
+        versionNumber++;
+        fileOut=path+filename+versionString+extention;
 
     }
 
-    System.out.println("file out " + file);
-    FileWriter fileWriter = new FileWriter(file);
+    System.out.println("file out " + fileOut);
+    FileWriter fileWriter = new FileWriter(fileOut);
   }
 }
