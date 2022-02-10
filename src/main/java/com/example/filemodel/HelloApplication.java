@@ -26,19 +26,17 @@ public class HelloApplication extends Application {
     String filename = "out";
     String extention = ".wav";
 
+    int versionNumber = 1;
+    String versionString = "(" + versionNumber + ")";
 
-    int versionNumber=1;
-    String versionString ="("+versionNumber+")";
-
-
-    String fileOut=path+filename+extention;
+    String fileOut = path + filename + extention;
     File file = new File(fileOut);
 
-    while (file.exists ()) {
+    while (file.exists()) {
       System.out.println("file exists");
-        versionNumber++;
-        fileOut=path+filename+versionString+extention;
-
+      versionNumber++;
+      fileOut = path + filename + "("+versionNumber+")" + extention;
+      file = new File(fileOut);
     }
 
     System.out.println("file out " + fileOut);
