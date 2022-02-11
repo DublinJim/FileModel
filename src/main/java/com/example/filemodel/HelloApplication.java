@@ -40,6 +40,8 @@ public class HelloApplication extends Application {
     }
 
     System.out.println("file out " + fileOut);
-    FileWriter fileWriter = new FileWriter(fileOut);
+  //  FileWriter fileWriter = new FileWriter(fileOut);
+    new FileWriter (fileOut);
+
   }
 }
