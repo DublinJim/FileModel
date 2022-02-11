@@ -23,7 +23,6 @@ public class FileCtr {
     }
 
     System.out.println("file out " + fileOut);
-    //  FileWriter fileWriter = new FileWriter(fileOut);
     new FileWriter(fileOut);
   }
 }
