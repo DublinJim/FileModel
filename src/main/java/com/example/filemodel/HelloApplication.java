@@ -27,8 +27,6 @@ public class HelloApplication extends Application {
     String extension = ".wav";
 
     int versionNumber = 0;
-
-
     String fileOut = path + filename + extension;
     File file = new File(fileOut);
 
