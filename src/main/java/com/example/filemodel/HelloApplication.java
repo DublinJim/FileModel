@@ -24,18 +24,18 @@ public class HelloApplication extends Application {
     //////////////////////////////////////////
     String path = "C:\\Users\\james.keogh\\Desktop\\templates\\Java.fx\\";
     String filename = "out";
-    String extention = ".wav";
+    String extension = ".wav";
 
     int versionNumber = 1;
     String versionString = "(" + versionNumber + ")";
 
-    String fileOut = path + filename + extention;
+    String fileOut = path + filename + extension;
     File file = new File(fileOut);
 
     while (file.exists()) {
       System.out.println("file exists");
       versionNumber++;
-      fileOut = path + filename + "("+versionNumber+")" + extention;
+      fileOut = path + filename + "(" + versionNumber + ")" + extension;
       file = new File(fileOut);
     }
 
