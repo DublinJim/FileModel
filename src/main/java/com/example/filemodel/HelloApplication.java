@@ -22,6 +22,11 @@ public class HelloApplication extends Application {
     stage.setScene(scene);
     stage.show();
     //////////////////////////////////////////
+    checkSequenceFiles ();
+
+  }
+
+  private void checkSequenceFiles() throws IOException {
     String path = "C:\\Users\\james.keogh\\Desktop\\templates\\Java.fx\\";
     String filename = "out";
     String extension = ".wav";
@@ -38,8 +43,7 @@ public class HelloApplication extends Application {
     }
 
     System.out.println("file out " + fileOut);
-  //  FileWriter fileWriter = new FileWriter(fileOut);
+    //  FileWriter fileWriter = new FileWriter(fileOut);
     new FileWriter (fileOut);
-
   }
 }
