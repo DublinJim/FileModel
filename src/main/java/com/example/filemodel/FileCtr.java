@@ -6,8 +6,7 @@ import java.io.IOException;
 
 public class FileCtr {
 
-    public FileCtr() {
-    }
+
 
   static  void checkSequenceFiles() throws IOException {
         String path = "C:\\Users\\james.keogh\\Desktop\\templates\\Java.fx\\";
