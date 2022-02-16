@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filemodel.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#getTheFiles" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filemodel.HelloController">
    <children>
-      <Button fx:id="quitOut" layoutX="205.0" layoutY="141.0" mnemonicParsing="false" onAction="#quitApp" prefHeight="101.0" prefWidth="145.0" text="quit" />
+      <Button fx:id="quitOut" layoutX="28.0" layoutY="32.0" mnemonicParsing="false" onAction="#getTheFiles" prefHeight="43.0" prefWidth="118.0" text="Write File" />
+      <Text fx:id="fileFoundTxt" layoutX="186.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="106.560302734375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="newFileTxt" layoutX="186.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="106.560302734375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Label layoutX="186.0" layoutY="84.0" text="Name of file found:" />
+      <Label layoutX="186.0" layoutY="165.0" text="File to write:" />
    </children>
 </AnchorPane>
