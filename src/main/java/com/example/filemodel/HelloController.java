@@ -1,9 +1,8 @@
 package com.example.filemodel;
 
 import java.io.IOException;
-import javafx.event.ActionEvent;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
 public class HelloController {
@@ -15,13 +14,16 @@ public class HelloController {
     private Text newFileTxt;
 
     @FXML
-    private Button quitOut;
-
-    @FXML
-    void getTheFiles(ActionEvent event) throws IOException {
+    void getTheFiles() throws IOException {
         FileCtr.checkSequenceFiles();
         fileFoundTxt.setText(FileCtr.checkFileExists());
         newFileTxt.setText(FileCtr.fileToWrite());
+    }
+
+    @FXML
+    void quitTheApp() {
+        Platform.exit();
+
     }
 
 }

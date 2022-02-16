@@ -21,5 +21,6 @@
       </Text>
       <Label layoutX="186.0" layoutY="84.0" text="Name of file found:" />
       <Label layoutX="186.0" layoutY="165.0" text="File to write:" />
+      <Button layoutX="35.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#quitTheApp" text="Quit" />
    </children>
 </AnchorPane>
